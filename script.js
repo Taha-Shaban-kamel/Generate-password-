@@ -4,7 +4,10 @@ function getVal(){
   return length ;
 }
 const generatePass = function(length){
-
+  if(length<5)
+  alert("the password length have to be greater than or equal 5");
+  else
+  {
   const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
   let pass = "";
 
@@ -12,6 +15,7 @@ const generatePass = function(length){
     pass += characters[Math.floor(Math.random()*characters.length)];
   }
   passfiled.innerHTML =pass;
+}
 }
 
 
